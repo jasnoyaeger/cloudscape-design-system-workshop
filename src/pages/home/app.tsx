@@ -12,7 +12,7 @@ import Breadcrumbs from '../../components/breadcrumbs';
 import Shell from '../../layouts/shell';
 
 import ProductionOverview from './components/production-overview';
-import Flavors from './components/flavors';
+import Alert from './components/alerting';
 import QualityReport from './components/quality-report';
 
 import { variationData, breakdownItems, productionMetrics, quote, notes } from './data';
@@ -33,7 +33,7 @@ export default function App() {
       >
         <Grid gridDefinition={[{ colspan: 12 }, { colspan: 8 }, { colspan: 4 }]} disableGutters={false}>
           <ProductionOverview metrics={productionMetrics} />
-          <Flavors data={variationData} items={breakdownItems} />
+          <Alert data={variationData} items={breakdownItems} />
           <QualityReport quote={quote} notes={notes} />
         </Grid>
       </ContentLayout>

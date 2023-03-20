@@ -10,18 +10,18 @@ import Header from '@cloudscape-design/components/header';
 import Pagination from '@cloudscape-design/components/pagination';
 import Table, { TableProps } from '@cloudscape-design/components/table';
 
-import { Flavor } from '../data';
+import { Alert } from '../data';
 import { TextFilter } from '@cloudscape-design/components';
 import Box from '@cloudscape-design/components/box';
 import Button from '@cloudscape-design/components/button';
 import SpaceBetween from '@cloudscape-design/components/space-between';
 
 const getFilterCounterText = (count = 0) => `${count} ${count === 1 ? 'match' : 'matches'}`;
-const getHeaderCounterText = (items: readonly Flavor[] = [], selectedItems: readonly Flavor[] = []) => {
+const getHeaderCounterText = (items: readonly Alert[] = [], selectedItems: readonly Alert[] = []) => {
   return selectedItems && selectedItems.length > 0 ? `(${selectedItems.length}/${items.length})` : `(${items.length})`;
 };
 
-const columnDefinitions: TableProps<Flavor>['columnDefinitions'] = [
+const columnDefinitions: TableProps<Alert>['columnDefinitions'] = [
   {
     header: 'Name',
     cell: ({ name }) => name,
@@ -81,13 +81,13 @@ const EmptyState = ({ title, subtitle, action }: { title: string; subtitle: stri
 };
 
 export interface VariationTableProps {
-  flavors: Flavor[];
+  Alert: Alert[];
 }
 
-export default function VariationTable({ flavors }: VariationTableProps) {
+export default function VariationTable({ Alert }: VariationTableProps) {
   const [preferences, setPreferences] = useState<CollectionPreferencesProps['preferences']>({ pageSize: 20 });
-  const { items, filterProps, actions, filteredItemsCount, paginationProps, collectionProps } = useCollection<Flavor>(
-    flavors,
+  const { items, filterProps, actions, filteredItemsCount, paginationProps, collectionProps } = useCollection<Alert>(
+    Alert,
     {
       filtering: {
         noMatch: (
@@ -98,7 +98,7 @@ export default function VariationTable({ flavors }: VariationTableProps) {
           />
         ),
         empty: (
-          <EmptyState title="No flavors" subtitle="No flavors to display." action={<Button>Create flavor</Button>} />
+          <EmptyState title="No Alerts" subtitle="No Alerts to display." action={<Button>Create Alert</Button>} />
         ),
       },
       pagination: { pageSize: preferences?.pageSize },
@@ -108,7 +108,7 @@ export default function VariationTable({ flavors }: VariationTableProps) {
   );
 
   return (
-    <Table<Flavor>
+    <Table<Alert>
       {...collectionProps}
       items={items}
       columnDefinitions={columnDefinitions}
@@ -122,29 +122,29 @@ export default function VariationTable({ flavors }: VariationTableProps) {
           const isItemSelected = selectedItems.filter(i => i.name === item.name).length;
           return `${item.name} is ${isItemSelected ? '' : 'not '}selected`;
         },
-        tableLabel: 'Flavors table',
+        tableLabel: 'Alert table',
       }}
       header={
         <Header
           variant="awsui-h1-sticky"
-          counter={getHeaderCounterText(flavors, collectionProps.selectedItems)}
+          counter={getHeaderCounterText(Alert, collectionProps.selectedItems)}
           actions={
             <SpaceBetween size="xs" direction="horizontal">
               <Button disabled={collectionProps.selectedItems?.length === 0}>Edit</Button>
-              <Button href="/create-flavor/index.html" variant="primary">
-                Create flavor
+              <Button href="/create-alert/index.html" variant="primary">
+                Create Alert
               </Button>
             </SpaceBetween>
           }
         >
-          Flavors
+          Alert
         </Header>
       }
       pagination={<Pagination {...paginationProps} />}
       filter={
         <TextFilter
           {...filterProps}
-          filteringPlaceholder="Find flavors"
+          filteringPlaceholder="Find Alerts"
           countText={getFilterCounterText(filteredItemsCount)}
         />
       }

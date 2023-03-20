@@ -23,10 +23,10 @@ export interface VariationsProps {
   items: TableProps['items'];
 }
 
-export default function Flavors({ data, items }: VariationsProps) {
+export default function Alert({ data, items }: VariationsProps) {
   return (
     <SpaceBetween size={'l'}>
-      <Container header={<Header variant="h2">Flavors (last 24h)</Header>}>
+      <Container header={<Header variant="h2">Alert (last 24h)</Header>}>
         <PieChart data={data} hideFilter={true} i18nStrings={{
           chartAriaRoleDescription: 'Pie chart',
           detailPopoverDismissAriaLabel: 'Dismiss',

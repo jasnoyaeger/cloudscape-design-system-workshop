@@ -19,7 +19,7 @@ import Input from '@cloudscape-design/components/input';
 import Breadcrumbs from '../../components/breadcrumbs';
 import Navigation from '../../components/navigation';
 import ShellLayout from '../../layouts/shell';
-import { chocolate, fruits } from '../flavors/data';
+import { chocolate, fruits } from '../alert/data';
 
 const options = [...fruits, ...chocolate].map(i => ({ value: i, label: i }));
 const isEmptyString = (value: string) => !value?.length;
@@ -36,7 +36,7 @@ export default function App() {
   return (
     <ShellLayout
       contentType="form"
-      breadcrumbs={<Breadcrumbs active={{ text: 'Create flavor', href: '/create-flavor/index.html' }} />}
+      breadcrumbs={<Breadcrumbs active={{ text: 'Create alert', href: '/create-alert/index.html' }} />}
       navigation={<Navigation />}
       tools={<HelpPanel header={<h2>Help panel</h2>} />}
     >
@@ -44,9 +44,9 @@ export default function App() {
         header={
           <Header
             variant="h1"
-            description="Create a new flavor by specifying ingredients, quality, and price. On creation a flavor will be tested by the product and marketing team."
+            description="Create a new alert by specifying x, y, and z."
           >
-            Create flavor
+            Create alert
           </Header>
         }
       >
@@ -59,11 +59,11 @@ export default function App() {
           <Form
             actions={
               <SpaceBetween direction="horizontal" size="xs">
-                <Button href="/flavors/index.html" variant="link">
+                <Button href="/alerting/index.html" variant="link">
                   Cancel
                 </Button>
                 <Button formAction="submit" variant="primary">
-                  Create flavor
+                  Create alert
                 </Button>
               </SpaceBetween>
             }

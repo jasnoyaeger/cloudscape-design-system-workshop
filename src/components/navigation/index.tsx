@@ -5,8 +5,12 @@ import SideNavigation, { SideNavigationProps } from '@cloudscape-design/componen
 
 const items: SideNavigationProps['items'] = [
   { type: 'link', text: 'Dashboard', href: '/home/index.html' },
-  { type: 'link', text: 'Flavors', href: '/flavors/index.html' },
-  { type: 'link', text: 'Create flavor', href: '/create-flavor/index.html' },
+  { type: 'link', text: 'Savings', href: '/home/index.html' },
+  { type: 'link', text: 'Commitments', href: '/home/index.html' },
+  { type: 'link', text: 'Alerts', href: '/alert/index.html' },
+  { type: 'link', text: 'Create alert', href: '/create-alert/index.html' },
+  { type: 'link', text: 'Allocations', href: '/home/index.html' },
+  { type: 'link', text: 'Reporting', href: '/home/index.html' },
 ];
 
 export default function Navigation() {

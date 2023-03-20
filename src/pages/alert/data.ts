@@ -1,6 +1,6 @@
 // Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
 // SPDX-License-Identifier: MIT-0
-export interface Flavor {
+export interface Alert {
   name: string;
   sold: number;
   produced: number;
@@ -25,7 +25,7 @@ export const fruits = [
   'Rose',
 ];
 
-export const variationsData: Flavor[] = [
+export const variationsData: Alert[] = [
   {
     name: 'Extra Dark Lemon Bar',
     sold: 9450,
