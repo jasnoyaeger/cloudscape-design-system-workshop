@@ -29,7 +29,7 @@ const columnDefinitions: TableProps<Alert>['columnDefinitions'] = [
     minWidth: 175,
   },
   {
-    header: 'Sold (last month)',
+    header: 'Address',
     cell: ({ sold }) => sold,
     sortingField: 'sold',
     minWidth: 160,
@@ -137,7 +137,7 @@ export default function VariationTable({ Alert }: VariationTableProps) {
             </SpaceBetween>
           }
         >
-          Alert
+          Members
         </Header>
       }
       pagination={<Pagination {...paginationProps} />}

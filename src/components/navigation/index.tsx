@@ -4,11 +4,11 @@ import React from 'react';
 import SideNavigation, { SideNavigationProps } from '@cloudscape-design/components/side-navigation';
 
 const items: SideNavigationProps['items'] = [
-  { type: 'link', text: 'Dashboard', href: '/home/index.html' },
+  { type: 'link', text: 'Club Dashboard', href: '/home/index.html' },
   { type: 'link', text: 'Savings', href: '/home/index.html' },
   { type: 'link', text: 'Commitments', href: '/home/index.html' },
-  { type: 'link', text: 'Alerts', href: '/alert/index.html' },
-  { type: 'link', text: 'Create alert', href: '/create-alert/index.html' },
+  { type: 'link', text: 'Members', href: '/alert/index.html' },
+  { type: 'link', text: 'Create Member', href: '/create-alert/index.html' },
   { type: 'link', text: 'Allocations', href: '/home/index.html' },
   { type: 'link', text: 'Reporting', href: '/home/index.html' },
 ];
