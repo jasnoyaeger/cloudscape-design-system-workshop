@@ -12,10 +12,10 @@
     "lint": "eslint . --ignore-path .gitignore --ext ts,tsx,js"
   },
   "dependencies": {
-    "@cloudscape-design/collection-hooks": "^1.0.0",
-    "@cloudscape-design/components": "^3.0.0",
-    "@cloudscape-design/design-tokens": "^3.0.0",
-    "@cloudscape-design/global-styles": "^1.0.0",
+    "@cloudscape-design/collection-hooks": "^1.0.23",
+    "@cloudscape-design/components": "^3.0.352",
+    "@cloudscape-design/design-tokens": "^3.0.23",
+    "@cloudscape-design/global-styles": "^1.0.12",
     "latest-version": "^7.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
