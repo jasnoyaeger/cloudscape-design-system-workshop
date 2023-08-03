@@ -13,7 +13,7 @@ export default defineConfig({
     port: 8080,
   },
   build: {
-    outDir: resolve(__dirname, './lib'),
+    outDir: resolve(__dirname, './build'),
     rollupOptions: {
       input: {
         home: resolve(__dirname, './src/pages/home/index.html'),

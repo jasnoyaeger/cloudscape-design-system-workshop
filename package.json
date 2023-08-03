@@ -3,8 +3,6 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "repository": "git@github.com:aws-samples/cloudscape-design-system-workshop.git",
-  "homepage": "https://github.com/aws-samples/cloudscape-design-system-workshop",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
