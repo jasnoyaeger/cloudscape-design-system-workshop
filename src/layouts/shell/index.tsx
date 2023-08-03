@@ -22,7 +22,7 @@ export default function Shell({ children, contentType, breadcrumbs, tools, navig
         <TopNavigation
           identity={{
             logo: { src: '/logo.svg', alt: 'Chocolate Factory Logo' },
-            title: 'Chocolate Factory',
+            title: 'Golf App',
             href: '/home/index.html',
           }}
           i18nStrings={{
