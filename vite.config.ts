@@ -17,8 +17,8 @@ export default defineConfig({
     rollupOptions: {
       input: {
         home: resolve(__dirname, './src/pages/home/index.html'),
-        flavors: resolve(__dirname, './src/pages/flavors/index.html'),
-        'create-flavor': resolve(__dirname, './src/pages/create-flavor/index.html'),
+        flavors: resolve(__dirname, './src/pages/alerts/index.html'),
+        'create-alert': resolve(__dirname, './src/pages/create-alert/index.html'),
       },
     },
   },
