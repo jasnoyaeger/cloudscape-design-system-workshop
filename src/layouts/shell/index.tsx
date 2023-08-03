@@ -21,7 +21,7 @@ export default function Shell({ children, contentType, breadcrumbs, tools, navig
       <div id="top-nav">
         <TopNavigation
           identity={{
-            logo: { src: '/logo.svg', alt: 'Chocolate Factory Logo' },
+            logo: { src: '/logo.svg', alt: 'Golf Logo' },
             title: 'Golf App',
             href: '/home/index.html',
           }}
